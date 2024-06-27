@@ -42,9 +42,10 @@ export const TodoWrapper = () => {
 
   return (
     <div className="TodoWrapper">
-      <h1>Get Things Done !</h1>
+      <h1>My ToDo List !</h1>
       <TodoForm addTodo={addTodo} />
       {/* display todos */}
+      <h3 className="TodayDate">{new Date().toLocaleDateString()}</h3>
       {todos.map((todo) =>
         todo.isEditing ? (
           <EditTodoForm editTodo={editTask} task={todo} />
